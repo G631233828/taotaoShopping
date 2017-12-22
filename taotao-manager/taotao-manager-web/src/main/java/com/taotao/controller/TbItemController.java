@@ -53,7 +53,8 @@ public class TbItemController {
 	
 	@ResponseBody
 	@RequestMapping("item/list")
-	public EUDataGridResult findallItems(@RequestParam(value="rows")int rows,@RequestParam(value="page")int page){
+	public EUDataGridResult findallItems(@RequestParam(value="rows")int rows,
+			@RequestParam(value="page")int page){
 		EUDataGridResult  list= tbItemService.getItemList(page, rows);
 		
 		return list;
