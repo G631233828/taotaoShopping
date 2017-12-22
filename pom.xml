@@ -261,6 +261,6 @@
 	<modules>
 		<module>taotao-common</module>
 		<module>taotao-manager</module>
-	<!-- 	<module>MybatisGenerator</module> -->
+		<module>MybatisGenerator</module>
 	</modules>
 </project>
