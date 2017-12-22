@@ -1,0 +1,11 @@
+com\taotao\dao\mapper\TbItemDescMapper.class
+com\taotao\dao\mapper\TbItemParamMapper.class
+com\taotao\dao\mapper\TbUserMapper.class
+com\taotao\dao\mapper\TbItemParamItemMapper.class
+com\taotao\dao\mapper\TbContentMapper.class
+com\taotao\dao\mapper\TbOrderItemMapper.class
+com\taotao\dao\mapper\TbItemMapper.class
+com\taotao\dao\mapper\TbOrderShippingMapper.class
+com\taotao\dao\mapper\TbItemCatMapper.class
+com\taotao\dao\mapper\TbOrderMapper.class
+com\taotao\dao\mapper\TbContentCategoryMapper.class

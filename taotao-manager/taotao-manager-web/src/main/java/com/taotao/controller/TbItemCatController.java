@@ -25,7 +25,6 @@ public class TbItemCatController {
 		@ResponseBody
 		@RequestMapping("/list")
 		public List categoryList(@RequestParam(value="id",defaultValue="0")Long parentId){
-				System.out.println(1);
 			List list = new ArrayList();
 			//查询数据库
 			 List<TbItemCat> tblist = tbItemCatService.getItemCatList(parentId);
