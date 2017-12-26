@@ -1,5 +1,5 @@
 /*******************************************************************************
-* KindEditor - WYSIWYG HTML Editor for Internet
+允许用户同时上传20张图片，单张图片容量不超过1MB允许用户同时上传20张图片，单张图片容量不超过1MB* KindEditor - WYSIWYG HTML Editor for Internet
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>

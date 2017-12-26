@@ -26,9 +26,9 @@ public class FTPClientTest {
 	public static void uploadFile(String upfileName, FileInputStream fileInputStream)
 			throws SocketException, IOException {
 		FTPClient client = connectFTP("192.168.1.165", 21, "ftpuser", "123456");
-		System.out.println("上传文件目录为：/home/ftpuser/test/");
+		System.out.println("上传文件目录为：/home/ftpuser/images");
 		client.makeDirectory("/home/ftpuser/test2/");
-		client.changeWorkingDirectory("/home/ftpuser/test2/");
+		client.changeWorkingDirectory("/home/ftpuser/www/images/");
 		client.appendFile(upfileName, fileInputStream);
 
 		//设置文件上传格式

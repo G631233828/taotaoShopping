@@ -1,5 +1,6 @@
 package com.taotao.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taotao.common.pojo.EUDataGridResult;
+import com.taotao.common.pojo.IDUtils;
+import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.dao.mapper.TbItemMapper;
 import com.taotao.entity.TbItem;
 import com.taotao.entity.TbItemExample;
@@ -68,6 +71,21 @@ public class TbItemServiceImpl implements TbItemService {
 		eu.setTotal(pageInfo.getTotal());
 		
 		return eu;
+	}
+
+	@Override
+	public TaotaoResult createItem(TbItem item) {
+
+		Long itemId = IDUtils.genItemId();
+		item.setId(itemId);
+		item.setStatus((byte)1);//商品的状态 1正常，2下架 3删除
+		item.setCreated(new Date());
+		item.setUpdated(new Date());
+		//插入到数据库
+		itemMapper.insert(item);
+		
+		return TaotaoResult.ok(); 
+		
 	}
 
 }

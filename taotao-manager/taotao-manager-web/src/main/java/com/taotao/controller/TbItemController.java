@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taotao.common.pojo.EUDataGridResult;
+import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.entity.TbItem;
 import com.taotao.entity.TbItemExample;
 import com.taotao.service.TbItemService;
@@ -45,7 +47,6 @@ public class TbItemController {
 	@RequestMapping("item/{itemId}")
 	@ResponseBody
 	public TbItem findItem(@PathVariable Long itemId) {
-		System.out.println(11111111);
 		TbItem item = tbItemService.getItemById(itemId);
 
 		return item;
@@ -58,12 +59,19 @@ public class TbItemController {
 		EUDataGridResult  list= tbItemService.getItemList(page, rows);
 		
 		return list;
-		
-		
 	}
 	
 	
 	
+	
+	@RequestMapping(value="/item/save",method=RequestMethod.POST)
+	@ResponseBody
+	private TaotaoResult createItem(TbItem item){
+		
+		TaotaoResult result =tbItemService.createItem(item);
+		
+		return result;
+	}
 	
 	
 	
